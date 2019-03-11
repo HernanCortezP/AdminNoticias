@@ -1,0 +1,20 @@
+<div class="col-md-4" *ngFor="let noticia of noticiass"> 
+<div class="card text-center">
+<div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+{{noticia.titulo}}
+
+<button class="btn btn-danger" (click)="eliminarNoticia(noticia.id)">
+    <i class="far fa-trash-alt"></i>
+</button>
+</div>
+<img class="card-img-top" [src]="noticia.image">
+<div class="card-body">
+
+  <p>{{noticia.descripcion}}</p>
+  <a [routerLink]="['/noticias/edit/', noticia.id]"  class="btn btn-info btn-block" >
+    EDITAR NOTICIA
+  </a>
+</div>
+</div>
+
+</div>
